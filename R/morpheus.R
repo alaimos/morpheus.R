@@ -264,10 +264,10 @@ height = NULL,
     ddr <- rev(ddr)
     rowInd <- rev(rowInd) # reverse to match order of R heat maps
     if(!is.null(rowAnnotations)){
-        rowAnnotations <- rowAnnotations[rowInd,]
+        rowAnnotations <- rowAnnotations[rowInd,,drop=FALSE]
     }
     if(!is.null(columnAnnotations)){
-        columnAnnotations <- columnAnnotations[colInd,]
+        columnAnnotations <- columnAnnotations[colInd,,drop=FALSE]
     }
 
     ## Labels for Row/Column
